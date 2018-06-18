@@ -71,39 +71,7 @@ namespace Obligatorio.Models
             direccion = textBox11.Text;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Hide();
-            using (NewPropertyScreen House = new NewPropertyScreen())
-            {
-                House.ShowDialog();
-                Application.Exit();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Apartamento apto = new Apartamento
-            {
-                Precio = precio, //Convert.ToInt32(textBox1),
-                Habitaciones = habitaciones,//Convert.ToInt32(textBox6),
-                Dormitorios = dormitorios,//Convert.ToInt32(textBox2),
-                Baños = baños,//Convert.ToInt32(textBox3),
-                AñoConstruccion = año,//Convert.ToInt32(textBox7),
-                MetrosCuadrados = metros,//Convert.ToDouble(textBox8),
-                Departamento = departamento,//textBox13.Text,
-                Ciudad = ciudad,//textBox5.Text,
-                Barrio = barrio,//textBox4.Text,
-                EstadoFisico = estado,
-                Garages = garages, //Convert.ToInt32(textBox12),
-                Direccion = direccion, //textBox11.Text,
-                Parrillero = parrillero,
-                GastosComunes = gastos,
-                NroPiso = piso,
-                Comentarios = new List<string>(),
-            };
-        }
-
+        
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
             dormitorios = Convert.ToInt32(textBox15.Text);
@@ -136,7 +104,7 @@ namespace Obligatorio.Models
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            ciudad = textBox5.Text;
+            garages = Convert.ToInt32(textBox12.Text);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -153,5 +121,40 @@ namespace Obligatorio.Models
         {
             gastos = Convert.ToInt32(textBox3.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Apartamento apto = new Apartamento
+            {
+                Precio = precio, //Convert.ToInt32(textBox1),
+                Habitaciones = habitaciones,//Convert.ToInt32(textBox6),
+                Dormitorios = dormitorios,//Convert.ToInt32(textBox2),
+                Baños = baños,//Convert.ToInt32(textBox3),
+                AñoConstruccion = año,//Convert.ToInt32(textBox7),
+                MetrosCuadrados = metros,//Convert.ToDouble(textBox8),
+                Departamento = departamento,//textBox13.Text,
+                Ciudad = ciudad,//textBox5.Text,
+                Barrio = barrio,//textBox4.Text,
+                EstadoFisico = estado,
+                Garages = garages, //Convert.ToInt32(textBox12),
+                Direccion = direccion, //textBox11.Text,
+                Parrillero = parrillero,
+                GastosComunes = gastos,
+                NroPiso = piso,
+                Comentarios = new List<string>(),
+            };
+            Inmobiliaria.GetInmobiliaria().AgregarPropiedad(apto);
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (NewPropertyScreen House = new NewPropertyScreen())
+            {
+                House.ShowDialog();
+                Application.Exit();
+            }
+        }
+
+
     }
 }

@@ -132,6 +132,7 @@ namespace Obligatorio
                 Comentarios = new List<string>(),
                 
             };
+            Inmobiliaria.GetInmobiliaria().AgregarPropiedad(casa);
             
         }
 
