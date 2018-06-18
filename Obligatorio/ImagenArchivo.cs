@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Obligatorio
 {
-    class ImagenArchivo
+    public class ImagenArchivo
     {
+        public int IdCliente;
+        public string Ruta;
+
+        public ImagenArchivo(int idCliente, string ruta)
+        {
+            this.IdCliente = idCliente;
+            this.Ruta = ruta;
+        }
     }
 }
