@@ -22,6 +22,8 @@ namespace Obligatorio.Models
         public ManejadorDeArchivos Archivo { get; set; }
 
         #endregion
+
+        #region Singleton
         public static Inmobiliaria Instancia = null;
         public static Inmobiliaria GetInmobiliaria()
         {
@@ -32,6 +34,8 @@ namespace Obligatorio.Models
 
             return Instancia;
         }
+        #endregion
+
         public Inmobiliaria()
         {
             Inmuebles = new List<Inmueble>();
