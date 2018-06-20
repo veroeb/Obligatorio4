@@ -63,12 +63,12 @@ namespace Obligatorio.Models
 
         private void textBox16_TextChanged(object sender, EventArgs e)
         {
-            precio = Convert.ToInt32(textBox16.Text);
+            precio = Convert.ToInt32(txtPrecio.Text);
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            direccion = textBox11.Text;
+            direccion = txtDireccion.Text;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -102,56 +102,58 @@ namespace Obligatorio.Models
                 NroPiso = piso,
                 Comentarios = new List<string>(),
             };
+
+            Inmobiliaria.GetInmobiliaria().AgregarPropiedad(apto);
         }
 
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
-            dormitorios = Convert.ToInt32(textBox15.Text);
+            dormitorios = Convert.ToInt32(txtDormitorio.Text);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            habitaciones = Convert.ToInt32(textBox6.Text);
+            habitaciones = Convert.ToInt32(txtHabitaciones.Text);
         }
 
         private void textBox14_TextChanged(object sender, EventArgs e)
         {
-            baños = Convert.ToInt32(textBox14.Text);
+            baños = Convert.ToInt32(txtBaños.Text);
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            ciudad = textBox5.Text;
+            ciudad = txtCiudad.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            barrio = textBox2.Text;
+            barrio = txtBarrio.Text;
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
-            departamento = textBox13.Text;
+            departamento = txtDepartamento.Text;
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            ciudad = textBox5.Text;
+            ciudad = txtCiudad.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            piso = Convert.ToInt32(textBox3.Text);
+            piso = Convert.ToInt32(txtNroPiso.Text);
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            comentarios = textBox9.Text;
+            comentarios = txtComentarios.Text;
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            gastos = Convert.ToInt32(textBox3.Text);
+            gastos = Convert.ToInt32(txtNroPiso.Text);
         }
     }
 }
