@@ -25,6 +25,7 @@ namespace Obligatorio.Models
         private int garages;
         private string direccion;
         private bool parrillero;
+        private bool jardin;
         private int precio;
         private int piso;
         private string comentarios;
@@ -58,7 +59,7 @@ namespace Obligatorio.Models
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            estado = cbEstado.SelectedItem.ToString();
         }
 
         private void textBox16_TextChanged(object sender, EventArgs e)
@@ -81,31 +82,7 @@ namespace Obligatorio.Models
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Apartamento apto = new Apartamento
-            {
-                Precio = precio, //Convert.ToInt32(textBox1),
-                Habitaciones = habitaciones,//Convert.ToInt32(textBox6),
-                Dormitorios = dormitorios,//Convert.ToInt32(textBox2),
-                Baños = baños,//Convert.ToInt32(textBox3),
-                AñoConstruccion = año,//Convert.ToInt32(textBox7),
-                MetrosCuadrados = metros,//Convert.ToDouble(textBox8),
-                Departamento = departamento,//textBox13.Text,
-                Ciudad = ciudad,//textBox5.Text,
-                Barrio = barrio,//textBox4.Text,
-                EstadoFisico = estado,
-                Garages = garages, //Convert.ToInt32(textBox12),
-                Direccion = direccion, //textBox11.Text,
-                Parrillero = parrillero,
-                GastosComunes = gastos,
-                NroPiso = piso,
-                Comentarios = new List<string>(),
-            };
-
-            Inmobiliaria.GetInmobiliaria().AgregarPropiedad(apto);
-        }
-
+        
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
             dormitorios = Convert.ToInt32(txtDormitorio.Text);
@@ -154,6 +131,51 @@ namespace Obligatorio.Models
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             gastos = Convert.ToInt32(txtNroPiso.Text);
+        }
+        
+        private void txtConstruccion_TextChanged(object sender, EventArgs e)
+        {
+            año = Convert.ToInt32(txtConstruccion.Text);
+        }
+
+        private void txtMetros_TextChanged(object sender, EventArgs e)
+        {
+            metros = Convert.ToDouble(txtMetros.Text);
+        }
+
+        private void cbJardin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jardin = Convert.ToBoolean(cbJardin.SelectedValue);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Apartamento apto = new Apartamento
+            {
+                Precio = precio, //Convert.ToInt32(textBox1),
+                Habitaciones = habitaciones,//Convert.ToInt32(textBox6),
+                Dormitorios = dormitorios,//Convert.ToInt32(textBox2),
+                Baños = baños,//Convert.ToInt32(textBox3),
+                AñoConstruccion = año,//Convert.ToInt32(textBox7),
+                MetrosCuadrados = metros,//Convert.ToDouble(textBox8),
+                Departamento = departamento,//textBox13.Text,
+                Ciudad = ciudad,//textBox5.Text,
+                Barrio = barrio,//textBox4.Text,
+                EstadoFisico = estado,
+                Garages = garages, //Convert.ToInt32(textBox12),
+                Direccion = direccion, //textBox11.Text,
+                Parrillero = parrillero,
+                GastosComunes = gastos,
+                NroPiso = piso,
+                Comentarios = new List<string>(),
+            };
+
+            Inmobiliaria.GetInmobiliaria().AgregarPropiedad(apto);
+        }
+
+        private void cbParrillero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            parrillero = Convert.ToBoolean(cbParrillero);
         }
     }
 }

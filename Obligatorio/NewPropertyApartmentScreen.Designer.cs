@@ -212,6 +212,7 @@
             this.txtMetros.Name = "txtMetros";
             this.txtMetros.Size = new System.Drawing.Size(216, 31);
             this.txtMetros.TabIndex = 62;
+            this.txtMetros.TextChanged += new System.EventHandler(this.txtMetros_TextChanged);
             // 
             // txtConstruccion
             // 
@@ -220,6 +221,7 @@
             this.txtConstruccion.Name = "txtConstruccion";
             this.txtConstruccion.Size = new System.Drawing.Size(216, 31);
             this.txtConstruccion.TabIndex = 61;
+            this.txtConstruccion.TextChanged += new System.EventHandler(this.txtConstruccion_TextChanged);
             // 
             // txtHabitaciones
             // 
@@ -306,6 +308,7 @@
             this.cbParrillero.Name = "cbParrillero";
             this.cbParrillero.Size = new System.Drawing.Size(238, 33);
             this.cbParrillero.TabIndex = 53;
+            this.cbParrillero.SelectedIndexChanged += new System.EventHandler(this.cbParrillero_SelectedIndexChanged);
             // 
             // cbJardin
             // 
@@ -318,6 +321,7 @@
             this.cbJardin.Name = "cbJardin";
             this.cbJardin.Size = new System.Drawing.Size(238, 33);
             this.cbJardin.TabIndex = 52;
+            this.cbJardin.SelectedIndexChanged += new System.EventHandler(this.cbJardin_SelectedIndexChanged);
             // 
             // txtCiudad
             // 

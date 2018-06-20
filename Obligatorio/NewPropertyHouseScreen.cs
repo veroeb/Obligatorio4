@@ -105,11 +105,11 @@ namespace Obligatorio
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            parrillero = Convert.ToBoolean(cbParrillero);
         }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String estado = cbEstado.SelectedItem.ToString();
+            estado = cbEstado.SelectedItem.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
