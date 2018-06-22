@@ -5,7 +5,7 @@ using System.IO;
 namespace Obligatorio
 {
     public class ManejadorDeArchivos
-    {
+    {     
         
         public void Escribir(String nomArchivo, String texto)
         {

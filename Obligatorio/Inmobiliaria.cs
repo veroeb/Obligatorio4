@@ -36,6 +36,9 @@ namespace Obligatorio.Models
         }
         #endregion
 
+        ManejadorDeArchivos manejadorDeArchivos = new ManejadorDeArchivos();
+        ManejadorArchivosImagenes ManejadorArchivosImagenes = new ManejadorArchivosImagenes();
+
         public Inmobiliaria()
         {
             Inmuebles = new List<Inmueble>();
@@ -64,7 +67,18 @@ namespace Obligatorio.Models
         public void AgregarPropiedad(Inmueble InmuebleaAgregar)
         {
             Inmuebles.Add(InmuebleaAgregar);
+            AgregarPropiedadArchivo();
+            //Agregar la propiedad al archivo. manejadorDeArchivos.Escribir();            
         }
+
+        public void AgregarPropiedadArchivo()
+        {
+            foreach(Inmueble i in Inmuebles)
+            {
+                manejadorDeArchivos.Escribir("propiedades.txt", i.Barrio + i.AñoConstruccion);
+            }
+        }
+
         public void AgregarPropietario(Propietario propietario)
         {
             Owners.Add(propietario);
