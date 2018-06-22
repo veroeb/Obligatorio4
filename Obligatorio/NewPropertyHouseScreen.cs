@@ -41,62 +41,62 @@ namespace Obligatorio
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            precio = Convert.ToInt32(txtPrecio.Text);
+            precio = Convert.ToInt32(textBox1.Text);
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            direccion = txtDireccion.Text;
+            direccion = textBox11.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            dormitorios = Convert.ToInt32(txtDormitorios.Text);
+            dormitorios = Convert.ToInt32(textBox2.Text);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            habitaciones = Convert.ToInt32(txtHabitaciones.Text);
+            habitaciones = Convert.ToInt32(textBox6.Text);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            baños = Convert.ToInt32(txtBaños.Text);
+            baños = Convert.ToInt32(textBox3.Text);
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            ciudad = txtCiudad.Text;
+            ciudad = textBox5.Text;
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            año = Convert.ToInt32(txtConstruccion.Text);
+            año = Convert.ToInt32(textBox7.Text);
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            metros = Convert.ToInt32(txtMetros.Text);
+            metros = Convert.ToInt32(textBox8.Text);
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            garages = Convert.ToInt32(txtGarage.Text);
+            garages = Convert.ToInt32(textBox12.Text);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            barrio = txtBarrio.Text;
+            barrio = textBox4.Text;
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
-            departamento = txtDepartamento.Text;
+            departamento = textBox13.Text;
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            comentarios=txtComentario.Text;
+            comentarios=textBox9.Text;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -105,11 +105,11 @@ namespace Obligatorio
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            parrillero = Convert.ToBoolean(cbParrillero);
+
         }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            estado = cbEstado.SelectedItem.ToString();
+            String estado = comboBox3.SelectedItem.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -129,12 +129,9 @@ namespace Obligatorio
                 Garages = garages, //Convert.ToInt32(textBox12),
                 Direccion = direccion, //textBox11.Text,
                 Parrillero = parrillero,
-                Comentarios = new List<string>(),                
+                Comentarios = new List<string>(),
+                
             };
-<<<<<<< HEAD
-=======
-
->>>>>>> 646817e4790ee32a19b9836a7cd39e99893a8248
             Inmobiliaria.GetInmobiliaria().AgregarPropiedad(casa);
             
         }

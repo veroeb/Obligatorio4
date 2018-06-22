@@ -76,7 +76,6 @@
     <Compile Include="LaunchScreen.Designer.cs">
       <DependentUpon>LaunchScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManejadorArchivosImagenes.cs" />
     <Compile Include="ManejadorDeArchivos.cs" />
     <Compile Include="NewPropertyApartmentScreen.cs">
       <SubType>Form</SubType>
